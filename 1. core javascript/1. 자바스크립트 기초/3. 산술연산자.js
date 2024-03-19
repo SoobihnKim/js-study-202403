@@ -17,4 +17,39 @@ console.log(27 % 5);
  // 제곱 연산
  console.log(3 ** 4); // 81
 
- 
+ console.log('======================');
+
+ // 증감 연산자
+ var x = 3;
+ x++;
+ ++x;
+ x--;
+ --x;
+ console.log(`x: ${x}`);
+
+ // 전위 연산, 후위 연산
+ var n1 = 10;
+ var n2 = n1++;
+ console.log(`n1: ${n1}, n2: ${n2}`);
+
+ var n3 = 10;
+ var n4 = ++n3;
+ console.log(`n3: ${n3}, n4: ${n4}`);
+
+var xx = 5;
+xx++;
+
+xx += 1; //xx = xx + 1; xx에 1을 더해서 대입
+
+xx--;
+
+xx -= 1; //xx = xx - 1; xx에 1을 빼서 대입
+
+xx *= 3; // 15
+xx /= 5; // 3
+xx **= 2; // 9
+xx %= 4; // 1
+
+console.log(`xx: ${xx}`);
+
+
