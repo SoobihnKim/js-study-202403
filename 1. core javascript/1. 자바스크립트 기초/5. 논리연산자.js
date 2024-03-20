@@ -1,7 +1,7 @@
 
 var t = true, f = false;
 
-// and 연산 : 논리합 - &&
+// and 연산 : 논리곱 - &&
 console.log(t && t); // t
 console.log(t && f); // f
 console.log(f && t); // f
@@ -9,7 +9,7 @@ console.log(f && f); // f
 
 console.log('=========================');
 
-// or 연산 : 논리곱 - ||
+// or 연산 : 논리합 - ||
 console.log(t || t); // t
 console.log(t || f); // t
 console.log(f || t); // t
