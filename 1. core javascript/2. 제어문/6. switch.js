@@ -35,6 +35,6 @@ switch (season) {
   case '겨울': case 'winter': 
     alert('겨울에는 홍천에 가세요');
     break;
-    default:
-      alert('봄, 여름, 가을, 겨울 중 하나를 입력하세요!');
+   default:
+    alert('봄, 여름, 가을, 겨울 중 하나를 입력하세요!');
 }
