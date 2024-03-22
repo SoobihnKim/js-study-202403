@@ -1,15 +1,27 @@
 
-// var a = +prompt('한 변(1)');
-// var b = +prompt('한 변(2)');
+// 가로길이, 세로길이
+var width = +prompt('한 변 (1): ');
+var height = +prompt('한 변 (2): ');
 
-var a = 3;
-var b = 4;
 
-var result = '';
+// 사각형을 저장할 변수
+// var rectangle = '* * * * *\n* * * * *\n* * * * *\n';
+var rectangle = '';
 
-// for (var i = 1; i <= 3; i++) {
-//   console.log(`result ${}`);
-//   for(var j = 1; j <= 4; j++) {
-//     console.log(`*\n`);
-//   }
-// }
+for (var i = 0; i < width; i++) {
+  // 3번
+  for (var j = 0; j < height; j++) {
+    rectangle += '* ';
+  }
+  rectangle += "\n";
+ }
+
+ alert(rectangle);
+
+/*
+ * * * * *
+ * * * * *
+ * * * * *
+ */
+
+
