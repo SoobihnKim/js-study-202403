@@ -38,12 +38,14 @@ const userList = [
 ];
 
 function min(userList, property) {
+  // userList가 비어있으면 null을 반환
   if (userList.length === 0) {
     return null;
   }
-
+  // 최소값을 가진 객체를 첫번째 사용자로 초기화
   let minValueUser = userList[0];
 
+  // userList를 순회하면서 주어진 속성의 최소값을 찾음
   for(const user of userList) {
     if (user[property] < minValueUser[property]) {
       minValueUser = user;
@@ -82,7 +84,7 @@ function find(callback) {
       return user;
     }
   }
-  return undefined;
+  return null; // 없을 경우
 }
 
 // '서울'에 사는 첫 번째 사용자를 찾는 예시
