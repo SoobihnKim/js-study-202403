@@ -65,17 +65,14 @@ const traders = [
 // 연습 1: 2022년에 발생한 모든 거래를 찾아
 //   거래자 정보(이름, 도시)를 배열에 매핑해주세요
 
-const result1 = traders
-.filter((t) => t.year === 2022)
-.map((t) => t.trader);
+const result1 = traders.filter((t) => t.year === 2022).map((t) => t.trader);
 console.log(result1);
 
 const tradersIn2022 = traders
-                        .filter((transaction) => transaction.year === 2022)
-                        .map((filteredTrs) => filteredTrs.trader);
-          
-console.log(tradersIn2022);
+  .filter((transaction) => transaction.year === 2022)
+  .map((filteredTrs) => filteredTrs.trader);
 
+console.log(tradersIn2022);
 
 // 연습 2: 거래자가 근무하는 모든 도시이름을 배열에 담아주세요.
 console.log("===================================");
@@ -84,12 +81,11 @@ const result2 = traders.map((t) => t.trader.city);
 const newArray = [...new Set(result2)];
 console.log(newArray);
 
-const mappedCities = traders.map(trs => trs.trader.city);
+const mappedCities = traders.map((trs) => trs.trader.city);
 // console.log(mappedCities);
 
 const cities = [...new Set(mappedCities)];
 console.log(cities);
-
 
 // 연습 3: 대전에 근무하는
 // 모든 거래자를 찾아 거래자정보(이름, 도시)를 배열에 매핑해주세요.
@@ -101,10 +97,9 @@ const result3 = traders
 result3.forEach((t) => console.log(t));
 
 traders
-  .filter(trs => trs.trader.city === '대전')
-  .map(filteredTrs => filteredTrs.trader)
-  .forEach(mappedTrader => console.log(mappedTrader));
-
+  .filter((trs) => trs.trader.city === "대전")
+  .map((filteredTrs) => filteredTrs.trader)
+  .forEach((mappedTrader) => console.log(mappedTrader));
 
 // 연습 4: 모든 거래자의 이름을 배열에 모아주세요.
 console.log("===================================");
@@ -113,7 +108,7 @@ const result4 = traders.map((t) => t.trader.name);
 const newArr = [...new Set(result4)];
 console.log(newArr);
 
-const mappedNames = [...new Set(traders.map(trs => trs.trader.name))];
+const mappedNames = [...new Set(traders.map((trs) => trs.trader.name))];
 console.log(mappedNames);
 
 // 연습 5: 서울에 사는 거래자의 모든 거래액의 총합 출력.
@@ -127,6 +122,14 @@ const result5 = traders
 let total = 0;
 result5.forEach((t) => (total += t));
 console.log(`거래총액: ${total}원`);
+
+console.log("==============||===================");
+
+const total2 = traders
+  .filter((trs) => trs.trader.city === "서울")
+  .reduce((total, trs) => total + trs.value, 0);
+console.log(`거래총액: ${total2}원`);
+
 /*
 let total = 0;
 traders
@@ -175,6 +178,18 @@ console.log(allNameBusan);
 
 //3. **모든 거래 중 가장 높은 거래액을 가진 거래의 거래자 정보(이름, 도시)와 거래액을 출력해주세요.**
 console.log("===================================");
+let maxValue = traders[0].value;
+// console.log(maxValue); //500000
+for (const t of traders) {
+  if (t.value > maxValue) {
+    maxValue = t.value;
+  }
+}
+console.log('max:',maxValue);
+
+const maxValueTrader = traders.filter((t) => t.value === maxValue)
+.map(t => t.trader);
+console.log(maxValueTrader);
 
 //4. **각 도시별로 발생한 총 거래액을 객체 형태로 매핑해주세요.
 //예를 들어, `{서울: 총거래액, 부산: 총거래액}`과 같은 형태입니다.**
