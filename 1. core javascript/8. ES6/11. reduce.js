@@ -128,3 +128,9 @@ const countByColor = appleBasket.reduce((count, apple) => {
   return count;
 }, {});
 console.log(countByColor);
+
+// reduce 이용하여 최대값 구하기
+const nums = [333, 66, 77, 1000, 5, 99];
+
+const maxValue = nums.reduce((max, n) => max < n ? n : max);
+console.log(`최대값: ${maxValue}`);
