@@ -80,3 +80,24 @@ console.log(increase()); // 1
 count = 999; 
 console.log(increase()); // 2
 console.log(increase()); // 3
+
+// 즉시 실행 함수: 함수를 1회성으로 사용할 목적으로 만드는 함수
+
+(function() {
+  console.log('hello');
+})();
+
+// const incClosure = () => {
+//   let count = 0; 
+//   return  () => ++count;
+// };
+
+const increase_ = (() => {
+  let count = 0; 
+  return () => ++count;
+})();
+
+
+increase_();
+increase_();
+increase_();
