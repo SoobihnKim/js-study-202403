@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼입니다.</button>
+
+    <script>
+        const $btn = document.getElementById('btn');
+
+        // 이벤트 핸들러
+        const helloHandler = () => alert('안녕');
+
+        // $btn.onclick = helloHandler;
+
+        // 콜백은 두개함수 작동 가능
+        $btn.addEventListener('click', helloHandler);
+        $btn.addEventListener('click', ()=>{
+            $btn.style.background = 'aqua';
+        }); // 익명함수는 못지움
+
+        // 기존 핸들러 지우고 싶으면 수동으로 지워야함
+        // 수동으로 지울 때는 반드시 핸들러가 기명함수이어야함
+        $btn.removeEventListener('click', helloHandler);
+
+    </script>
+</body>
+</html>
