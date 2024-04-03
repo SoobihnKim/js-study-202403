@@ -77,6 +77,6 @@ const calculate = () => {
       $currentCalculation.textContent = descriptionLog;
 
       // 로그 이력 쌓기
-      accumulateLog();
+      accumulateLog({descriptionLog, currentResult});
      
 };
