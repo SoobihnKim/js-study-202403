@@ -4,14 +4,14 @@
 // 이벤트 핸들러 바인딩
 $addBtn.addEventListener('click', e => {
   // 연산 처리 함수
-  calculate();
+  calculate(ADD);
 });
 $subtractBtn.addEventListener('click', e => {
-  calculate();
+  calculate(SUB);
 });
 $multiplyBtn.addEventListener('click', e => {
-  calculate();
+  calculate(MUL);
 });
 $divideBtn.addEventListener('click', e => {
-  calculate();
+  calculate(DIV);
 });
