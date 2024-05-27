@@ -39,4 +39,4 @@ fetch(URL)
     console.log(json);
     // 게시물 정보 화면에 그리기
     renderPosts(json);
-  })
+  });
