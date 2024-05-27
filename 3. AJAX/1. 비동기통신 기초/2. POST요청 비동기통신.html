@@ -47,10 +47,10 @@
 
       // 요청헤더에 payload의 mime type을 명시해야함.
       xhr.setRequestHeader('content-type', 'application/json')
-         // JSON.parse() :  JSON -> JS
-        // JSON.stringify() : JS -> JSON
-        // 읽은 데이터는 순수 자바스크립트이므로 서버에 보낼때는
-        // JSON으로 변환하여 보내야함
+      // JSON.parse() :  JSON -> JS
+      // JSON.stringify() : JS -> JSON
+      // 읽은 데이터는 순수 자바스크립트이므로 서버에 보낼때는
+      // JSON으로 변환하여 보내야함
       xhr.send(JSON.stringify(payload));
 
       // 응답 확인
