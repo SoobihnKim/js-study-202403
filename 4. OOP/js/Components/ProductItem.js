@@ -3,9 +3,10 @@ import Component from "./Component.js";
 // LI 태그 렌더링 담당
 class ProductItem extends Component {
 
-  constructor(tagId, prod) {
+  constructor(tagId, prod, shoppingCart) {
     super(tagId);
     this.prod = prod;
+    this.shoppingCart = shoppingCart;
   }
 
   render() {
@@ -33,7 +34,8 @@ class ProductItem extends Component {
     const $btn = $prodLi.querySelector('button');
     $btn.addEventListener('click', e => {
       console.log(title);
-      console.log('버튼 크릭!!');
+      console.log('버튼 클릭!!');
+      this.shoppingCart.addToCart(this.prod);
     });
 
     return $prodLi;
